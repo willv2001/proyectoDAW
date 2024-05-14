@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital UES</title>
+    <link href="./recursos/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <style type ="text/css">
+        .principal-div{
+            background-color: #A4C7CD;
+        }
+
+        .second-div{
+            background-color: #413C58;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0; 
+            overflow: hidden;
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+        }
+
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" data-bs-theme="dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Hospital UES</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Inicio <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./vistas/somos.html">Sobre Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./vistas/clientes.html">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./vistas/equipo.html">Equipo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./vistas/contacto.html">Contáctanos</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+    </nav>    
+
+    <div class="principal-div text-center" >
+        <br><br>
+        <h1 class="display-1">Hospital</h1>
+        <h2 class="display-5">Universidad de El Salvador</h2>
+        <br>
+        <button type="button" class="btn btn-dark "><a class="nav-link" href="./vistas/somos.html">Quienes Somos</a></button>
+        <br>
+        <br>
+    </div>     
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./recursos/img/1.png" class="d-block w-100" alt="1">
+          </div>
+          <div class="carousel-item">
+            <img src="./recursos/img/2.png" class="d-block w-100" alt="2">
+          </div>
+          <div class="carousel-item">
+            <img src="./recursos/img/3.png" class="d-block w-100" alt="3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>    
+
+    <div class="video-container position-relative">
+        <video class="position-absolute top-0 start-0 w-100 h-100" src="./recursos/img/videoInicio.mp4" autoplay loop muted></video>
+    </div>
+    
+    <div class="container text-center overlay position-relative top-50 start-50 translate-middle" style="z-index: 1;">
+        <div class="col-md-5">                                 
+            <div class="container text-start text-white bg-dark p-3">                              
+                <h1 class="display-5">Confianza y Seguridad</h1>
+                <p class="lead"> Nuestro equipo médico está compuesto por profesionales altamente calificados y dedicados que brindan atención médica de la más alta calidad a nuestros pacientes. Desde médicos y enfermeras hasta especialistas en diversas áreas de la medicina, cada miembro de nuestro equipo está comprometido con tu bienestar y seguridad. </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <br>
+        <figure class="text-end">
+            <blockquote class="blockquote">
+              <p>Cuidando cada paso del camino</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Tu salud, <cite title="Source Title">Nuestra Prioridad</cite>
+            </figcaption>
+          </figure>        
+    </div>
+    <br>
+    <br>
+
+    <div class="second-div text-white">
+        <br>
+        <div class="container text-center">
+          <br>
+          <br>
+          <h1 class="display-2">Nuestra Tecnología</h1>
+          <br>
+          <p class="lead">La vanguardia en procesos de salud</p>
+        </div>
+        <br>
+        <div class="container text-center">
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <img src="./recursos/img/ultrasonidoIndex.png" class="img-fluid" alt="Ultrasonido" width="250" height="250">
+                <br><br>
+                <h2 class="display-6">Ultrasonido</h2>
+                <br>
+                <p class="lead">
+                La principal diferencia de GE Voluson E8 con respecto a los predecesores de la serie es la tecnología avanzada de visualización volumétrica HD live de segunda generación.
+                </p>
+            </div>
+            <div class="col">
+                <img src="./recursos/img/resonanciaIndex.png" class="img-fluid" alt="Resonancia Magnética" width="250" height="250">
+                <br><br>
+                <h2 class="display-6">Resonancia Magnética</h2>
+                <br>
+                <p class="lead">
+                    SIEMENS Magnetom Avanto 1.5T es el dispositivo cuenta con una tecnología original de Siemens llamada Tim, que hace que las imágenes sean mucho más estables, una amplia gama de aplicaciones clínicas y un bajo nivel de ruido durante el funcionamiento.
+                </p>
+            </div>
+            <div class="col">
+              <img src="./recursos/img/respiradorIndex.png" class="img-fluid" alt="Respirador Artificial" width="250" height="250">
+              <br><br>
+              <h2 class="display-6">Respirador Artificial</h2>
+              <br>
+              <p class="lead">
+                Respiradores artificiales de alta presión protegen completamente a los usuarios de la falta de presión de los pulmones y de la falta de oxigenación del cuerpo.
+              </p>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container text-end">
+            <button type="button" class="btn btn-light"><a class="nav-link" href="./vistas/equipo.html">Ver mas</a></button>
+        </div>
+        <br>
+    </div>
+
+
+    <footer class="text-center text-white" style="background-color: #f1f1f1;">
+        <div class="container pt-4">
+            <section class="mb-4 d-flex justify-content-center">
+                <a class="nav-link d-inline-block me-3" href="https://www.facebook.com/UESoficial.SV">
+                    <img src="./recursos/fontawesome/svgs/brands/facebook.svg" alt="Facebook" class="img-fluid" width="15" height="15">
+                </a>
+                <a class="nav-link d-inline-block me-3" href="https://twitter.com/UESoficial">
+                    <img src="./recursos/fontawesome/svgs/brands/x-twitter.svg" alt="twitter" class="img-fluid" width="15" height="15">
+                </a>
+                <a class="nav-link d-inline-block me-3" href="https://www.instagram.com/uesoficial?igsh=MTdxcjVuaG5wOGt2Zg==">
+                    <img src="./recursos/fontawesome/svgs/brands/instagram.svg" alt="instagram" class="img-fluid" width="15" height="15">
+                </a>
+                <a class="nav-link d-inline-block me-3" href="https://sv.linkedin.com/school/universidad-de-el-salvador/">
+                    <img src="./recursos/fontawesome/svgs/brands/linkedin.svg" alt="linkedin" class="img-fluid" width="15" height="15">
+                </a>
+                <a class="nav-link d-inline-block me-3" href="https://wa.me/72516892?text=Hola">
+                    <img src="./recursos/fontawesome/svgs/brands/whatsapp.svg" alt="whatsapp" class="img-fluid" width="15" height="15">
+                </a>
+            </section>
+        </div>
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            <img src="./recursos/img/logoUes.png" alt="logoUes" class="img-fluid me-3" width="30" height="30">
+
+            Desarrollo de Aplicaciones Web:
+            <a class="text-dark" href="https://www.ues.edu.sv/">Universidad de El Salvador</a>
+        </div>
+    </footer>
+
+    <script src="./recursos/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./recursos/fontawesome/js/fontawesome.js"></script>
+    <script src="./recursos/bootstrap/css/bootstrap.min.css"></script>
+</body>
+</html>
