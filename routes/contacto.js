@@ -8,8 +8,8 @@ const router = Router();
 const transporter = nodemailer.createTransport({
   service: 'gmail', // Servicio de correo electrónico
   auth: {
-    user: 'haz.azu.calderonbonilla@gmail.com', // Tu dirección de correo electrónico
-    pass: 'lmkq shlc urjf rhxy' // Tu contraseña de correo electrónico
+    user: 'correo', // Remplazar por dirección de correo electrónico
+    pass: 'token' // Remplazar por token de pass de google
   }
 });
 
