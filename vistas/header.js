@@ -5,9 +5,7 @@ function renderSection() {
       <h1 class="display-1">Hospital</h1>
       <h2 class="display-5">Universidad de El Salvador</h2>
       <br>
-      <button type="button" class="btn btn-dark">
-        <a class="nav-link" href="./somos.html">Sobre Nosotros</a>
-      </button>
+      <a class="btn btn-dark" href="./somos.html" role="button">Quienes Somos</a>
       <br><br>
     </div>
   `;
