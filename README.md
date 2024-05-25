@@ -1,4 +1,4 @@
 instalar node.js 
-npm express
-nprm nodemailer
+npm i express
+npm i nodemailer
 general token con google y cambiar correo electronico
