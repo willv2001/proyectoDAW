@@ -1,4 +1,3 @@
-
 const { Router } = require('express');
 const nodemailer = require('nodemailer');
 
@@ -8,8 +7,8 @@ const router = Router();
 const transporter = nodemailer.createTransport({
   service: 'gmail', // Servicio de correo electrónico
   auth: {
-    user: 'correo', // Remplazar por dirección de correo electrónico
-    pass: 'token' // Remplazar por token de pass de google
+    user: 'haz.azu.calderonbonilla@gmail.com', // Tu dirección de correo electrónico
+    pass: 'lmkq shlc urjf rhxy' // Tu contraseña de correo electrónico
   }
 });
 
@@ -39,10 +38,12 @@ router.post('/enviarCorreo', (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log(error);
-      res.status(500).send('Error al enviar el correo');
+      res.json({ success: false, message: 'Error al enviar el correo' });
+      return;
     } else {
       console.log('Correo enviado: ' + info.response);
-      res.send('Correo enviado correctamente');
+      res.json({ success: true, message: 'Correo enviado correctamente' });
+      return;
     }
   });
 });
