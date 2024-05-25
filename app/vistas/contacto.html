@@ -114,6 +114,7 @@
                     <span class="contact100-form-title">
                         Déjanos tu correo
                     </span>
+                    <div id="alertContainer"></div>
                     <div class="wrap-input100 validate-input" data-validate="Name is required">
                         <input class="input100" type="text" id="name" name="name" placeholder="Nombre" required>
                         <span class="focus-input100"></span>
@@ -142,66 +143,105 @@
         </div>
     </div>
     <br>
-    <div id="messageContainer"></div>
-
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Previene el comportamiento predeterminado de envío del formulario
+        
+        // Obtiene los datos del formulario
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        
+        try {
+            const response = await fetch('/enviarCorreo', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+            });
+            
+            const { success, message } = await response.json();
+            
+            // Crea un elemento div para mostrar el mensaje de alerta
+            const alertContainer = document.getElementById('alertContainer');
+            const alertDiv = document.createElement('div');
+            alertDiv.classList.add('alert', success ? 'alert-success' : 'alert-danger');
+            alertDiv.textContent = message;
+            
+            // Agrega el mensaje de alerta al contenedor
+            alertContainer.innerHTML = '';
+            alertContainer.appendChild(alertDiv);
+            
+            // Limpia el formulario después de un envío exitoso
+            if (success) {
+            form.reset();
+            }
+        } catch (error) {
+            console.error('Error al enviar el formulario:', error);
+            alert('Ocurrió un error al enviar el formulario. Por favor, inténtalo de nuevo más tarde.');
+        }
+        });
+    </script>
+    
     <div class="accordion acordeon1" id="accordionExample">
         <div class="accordion-item acordeon1">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed acordeon1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              CARNET #1
+              CC22060
             </button>
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              Nombre Completo y Correo
+                Gabriel Omar Calderon Calderon cc22060@ues.edu.sv
             </div>
           </div>
         </div>
         <div class="accordion-item acordeon2">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed acordeon2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                CARNET #2
+                RV19012
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                Nombre Completo y Correo
+                Fernando José Rosales Valdes rv19012@ues.edu.sv
             </div>
           </div>
         </div>
         <div class="accordion-item acordeon3">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed acordeon3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                CARNET #3
+                AG22029
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-                Nombre Completo y Correo
+                Carlos Alberto Avila Gonzalez ag22029@ues.edu.sv
             </div>
           </div>
         </div>
         <div class="accordion-item acordeon4">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed acordeon4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    CARNET #4
+                    BV20003
                 </button>
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Nombre Completo y Correo
+                    Willy Jeferson Bonilla Vásquez bv20003@ues.edu.sv
                 </div>
             </div>
         </div>
         <div class="accordion-item acordeon5">
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed acordeon5" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    CARNET #5
+                    CB22014
                 </button>
             </h2>
             <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    Nombre Completo y Correo
+                    Hazel Azucena Calderon Bonilla cb22014@ues.edu.sv
                 </div>
             </div>
         </div>
