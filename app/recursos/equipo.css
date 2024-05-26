@@ -1,0 +1,40 @@
+/* equipo.css */
+
+.intro {
+    background-color: #A4C7CD;
+    color: #333;
+}
+
+.intro h1 {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.bg-morado {
+    background-color: #413C58;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    background-color: #f8f9fa;
+    border-radius: 0 10px 10px 0;
+}
+
+.card-title {
+    color: #0066cc;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+}
